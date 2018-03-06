@@ -1,0 +1,7 @@
+Here is a good general purpose python tutorial for you:
+https://pythonprogramming.net/beginner-python-programming-tutorials/
+
+You can install python on your system by downloading the latest version from this link:
+https://www.python.org/downloads/
+
+Make sure that you are using Python 3.x.x and not Python 2.x.x because python 2 is a bit outdated now. 
