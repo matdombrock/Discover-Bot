@@ -4,7 +4,7 @@
 import discord
 import requests
 from pathlib import Path
-
+import glob
 client = discord.Client()
 
 bot_command = "?"
@@ -21,15 +21,25 @@ async def on_message(message):
 	if message.author == client.user:#make sure we are not talking to ourselves 
 		return
 	if (bot_command+'tutorial') in msgin[0] or (bot_command+'tut') in msgin[0]:
-		tutorial_location = 'tutorials/'+msgin[1]+'.txt'
-		print(tutorial_location)
-		#tutorail_file = Path(tutorial_location)
-		if Path(tutorial_location).is_file():
-			file = open(tutorial_location, "r")
-			msgout = file.read()
-			#msgout += "\n \n[If you have suggestions for a new tutorial or concerns about this one, please let us know in #suggestions-and-meta]"
+		if ('list') in msgin[1]:
+			tut_dir = 'tutorials/'
+			ftype = ".txt"
+			tut_list = (glob.glob(tut_dir+"*.txt"))
+			msgout = "**TUTORIALS AVAILABLE:**"
+			for title in tut_list:
+				title = title.replace(tut_dir,"")
+				title = title.replace(ftype,"")
+				msgout += "\n**"+title+"**"
 		else:
-			msgout = tag+"I can't find any saved tutorials on "+msgin[1]+"... sorry :/"
+			tutorial_location = 'tutorials/'+msgin[1]+'.txt'
+			print(tutorial_location)
+			#tutorail_file = Path(tutorial_location)
+			if Path(tutorial_location).is_file():
+				file = open(tutorial_location, "r")
+				msgout = file.read()
+				#msgout += "\n \n[If you have suggestions for a new tutorial or concerns about this one, please let us know in #suggestions-and-meta]"
+			else:
+				msgout = tag+"I can't find any saved tutorials on "+msgin[1]+"... sorry :/"
 		await client.send_message(message.channel, msgout)
 
 
@@ -42,4 +52,4 @@ async def on_ready():
 
 
 
-client.run('Your key here')
+client.run('Your key')

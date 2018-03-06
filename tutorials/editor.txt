@@ -1,0 +1,19 @@
+To get stared with coding you will need a good text editor. While it is possible to use just a regular editor like NotePad, you will be missing out on some really helpful features like line numbering and "syntax highlighting"
+
+Here is an example of what we mean by "syntax highlighting":
+https://i.stack.imgur.com/9SFY7.png
+
+You can see that the text is not just black and white, but colored instead. These colors will help you read the and debug your code a lot faster.
+
+///////
+
+A good text editor to get started with is Sublime Text:
+https://www.sublimetext.com/
+
+A great open source alternative to Sublime called Lime Text:
+http://limetext.org/
+
+Some people also like NotePad++ which is also open source:
+https://notepad-plus-plus.org/
+
+Pick whichever one sounds the best to you and get coding!

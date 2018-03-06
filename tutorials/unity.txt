@@ -1,0 +1,7 @@
+Download the Unity editor for your system at:
+https://store.unity.com/
+
+The best place to get started with learning Unity is:
+https://unity3d.com/learn/tutorials
+
+Try to stick with programming in C# if you can because this is the most commonly used language for Unity. 

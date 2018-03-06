@@ -1,0 +1,8 @@
+So you want to get started making website? 
+Awesome. 
+
+Here is a good tutorial to get started. Make sure to click the "Try it Yourself" button so that you can see your code in action!
+https://www.w3schools.com/html/
+
+
+**NOTE ABOUT W3SCHOOLS: While this site is a good source for web development tutorials, they offer a "W3Schools' Online Certification" which is generally not considered to be of value by the industry. The helpers on this discord do not encourage you to pay for any certificates on w3schools.com**
