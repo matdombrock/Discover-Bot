@@ -42,4 +42,4 @@ async def on_ready():
 
 
 
-client.run('YOUR KEY HERE')
+client.run('Your key here')

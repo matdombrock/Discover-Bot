@@ -1,0 +1,4 @@
+ Here is an awesome video tutorial series for learning Java. 
+ https://www.youtube.com/playlist?list=PL84A56BC7F4A1F852
+
+ We are still looking for a good text based tutorial. Let us know if you have a suggestion. 

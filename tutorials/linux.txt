@@ -1,0 +1,7 @@
+Get stared with Linux by installing Ubunutu:
+https://www.ubuntu.com/download
+
+Here is a Hello world in Linux assembly. There's tons of them out there but I just whipped this up with a short explanation to encourage people to learn a bit
+https://github.com/KyleNehman/Linux-ASM-Hello-World
+
+We are looking for more Linux tutorials to add. Let us know if you have any suggestions. 

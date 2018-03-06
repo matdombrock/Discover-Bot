@@ -1,0 +1,7 @@
+Here is a good general purpose C++ tutorial for you:
+http://www.cplusplus.com/doc/tutorial/
+
+You can start by installing a C++ compiler (G++ is a good one) and/or an IDE from this list:
+http://www.freebyte.com/programming/cpp/#cppcompilers
+
+C++ is an object oriented language based on C and is a moderately difficult language to learn. It is recommended, but not required, to have a good grasp on C before diving into C++.

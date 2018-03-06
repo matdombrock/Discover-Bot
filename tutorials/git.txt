@@ -1,0 +1,7 @@
+**Beginner:**
+Github Tutorial "Hello World":
+https://guides.github.com/activities/hello-world/
+
+**Intermediate**
+Git from the Command Line Interface:
+https://matdombrock.github.io/git-from-cli
