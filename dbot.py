@@ -15,7 +15,7 @@ client = discord.Client()
 
 @client.event
 async def on_message(message):
-	global ban_list
+	global banned_words
 	bot_command = "?"
 	memories = []
 	memories_file = 'memories.pk'
@@ -34,7 +34,7 @@ async def on_message(message):
 	if message.author == client.user:#make sure we are not talking to ourselves 
 		return
 
-	for word in ban_list:
+	for word in banned_words:
 		if str(word).lower() in str(msgin_original).lower():
 			msgout = tag+"**WOAH THERE!**\n\n**RULES:**\n```4.) NO HATE SPEECH OF ANY KIND (SEE RULE #1 & #3)```\n"
 			msgout += "This incident has been logged.\nIf you feel like this happened in error, please contact a helper and let us know what happened."
@@ -167,9 +167,12 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
+def load_banned_words(location):
+	print("Loading Baned Words List")
+	banned_words = []
+	with open(location) as f:
+		banned_words = f.read().splitlines()
+	return banned_words
 
-print("Loading Ban List")
-ban_list = []
-with open('banned_words.txt') as f:
-	ban_list = f.read().splitlines()
-client.run('NDIwMzk4MzEwNTQxNDkyMjI1.DX_Z7A.5IO-BQcbK-HlsfmBZ4WdUkTp1wg')
+banned_words = load_banned_words('banned_words.txt')
+client.run('change-me')

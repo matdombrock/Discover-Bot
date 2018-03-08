@@ -1,0 +1,3 @@
+MATLK#2957: ['banwurd']
+OFFENDING WORD: BANWURD
+-------
