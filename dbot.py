@@ -172,4 +172,4 @@ print("Loading Ban List")
 ban_list = []
 with open('banned_words.txt') as f:
 	ban_list = f.read().splitlines()
-client.run('NDIwMzk4MzEwNTQxNDkyMjI1.DX_Z7A.5IO-BQcbK-HlsfmBZ4WdUkTp1wg')
+client.run('Your-key')
