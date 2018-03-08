@@ -15,10 +15,14 @@ client = discord.Client()
 
 @client.event
 async def on_message(message):
+	global ban_list
 	bot_command = "?"
 	memories = []
 	memories_file = 'memories.pk'
 	help_list = []
+	tut_dir = 'tutorials/'
+	ftype = ".txt"
+	
 	msgin_original = message.content #some functions need case sensitive input
 	msgin = message.content.lower()
 	msgin = msgin.split(" ")
@@ -26,7 +30,28 @@ async def on_message(message):
 	print(msgin)
 	tag = '{0.author.mention} : \n'.format(message)
 
+	print("chan: "+str(message.channel))
 	if message.author == client.user:#make sure we are not talking to ourselves 
+		return
+
+	for word in ban_list:
+		if str(word).lower() in str(msgin_original).lower():
+			msgout = tag+"**WOAH THERE!**\n\n**RULES:**\n```4.) NO HATE SPEECH OF ANY KIND (SEE RULE #1 & #3)```\n"
+			msgout += "This incident has been logged.\nIf you feel like this happened in error, please contact a helper and let us know what happened."
+			log_path = "deletion-log.txt"
+			with open(log_path, 'r') as file:
+				old = file.read()
+			with open(log_path, 'w') as file:
+				file.write(str(message.author)+": "+str(msgin_original)+"\n"+"OFFENDING WORD: "+str(word)+"\n-------\n"+old)
+			await client.delete_message(message)
+			await client.send_message(message.channel, msgout)
+			return
+
+	if str(message.channel)=="welcome":
+		tutorial_location = 'tutorials/welcome-message.txt'
+		file = open(tutorial_location, "r")
+		msgout = file.read()
+		await client.send_message(message.channel, msgout)
 		return
 
 	if random.randrange(50)<2:
@@ -39,8 +64,6 @@ async def on_message(message):
 	if (bot_command+'tutorial') in msgin[0] or (bot_command+'tut') in msgin[0]:
 		if ('list') in msgin[1]:
 			print("printing tut list")
-			tut_dir = 'tutorials/'
-			ftype = ".txt"
 			tut_list = (glob.glob(tut_dir+"*.txt"))
 			msgout = "**TUTORIALS AVAILABLE:**"
 			for title in tut_list:
@@ -145,5 +168,8 @@ async def on_ready():
     print('------')
 
 
-
-client.run('Your key')
+print("Loading Ban List")
+ban_list = []
+with open('banned_words.txt') as f:
+	ban_list = f.read().splitlines()
+client.run('NDIwMzk4MzEwNTQxNDkyMjI1.DX_Z7A.5IO-BQcbK-HlsfmBZ4WdUkTp1wg')

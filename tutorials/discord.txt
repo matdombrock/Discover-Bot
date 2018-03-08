@@ -1,0 +1,17 @@
+When typing copying code into discord you can help it be more easily readbale by wrapping your code in the correct code blocks. 
+
+For example:
+```python
+if ((bot_command+'roll') in msgin[0]):
+		msgin = msgin[1].split("d")
+		result = ""
+		results = ""
+		for x in range(int(msgin[0])):
+			result = random.randrange( 0, int(msgin[1]) ) +1
+			results += str(result)+"\n"
+		msgout = tag+results
+		await client.send_message(message.channel, msgout
+```
+
+Learn how to do this here:
+https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-

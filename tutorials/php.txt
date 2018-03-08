@@ -1,0 +1,22 @@
+Beginner PHP tutorial:
+https://www.w3schools.com/php/default.asp
+
+Getting started with PHP for people who already kow programming:
+https://learnxinyminutes.com/docs/php/
+
+Official PHP Docs:
+http://php.net/manual/en/langref.php
+
+See what information about your PHP installation with:
+```
+<?
+phpinfo();
+?>
+```
+
+You can also check your PHP version from the command line with:
+```
+php -v
+```
+
+**NOTE ABOUT W3SCHOOLS: While this site is a good source for web development tutorials, they offer a "W3Schools' Online Certification" which is generally not considered to be of value by the industry. The helpers on this discord do not encourage you to pay for any certificates on w3schools.com**
