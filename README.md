@@ -29,6 +29,6 @@ Example: ````python3 dbot.py````
 ### Contributing:
 This is a community project, so anyone is welcome to contribute. 
 
-That being said, the main code base is soon to go through a major re-write.
+That being said, the code is soon to go through a major re-write.
 
 A great way to help out is by adding preset tutorial messages to the ```tutorials/``` directory. These messages should be formatted just as you would format a discord message and they should be named ```<subject>.txt``` (all lower case).
